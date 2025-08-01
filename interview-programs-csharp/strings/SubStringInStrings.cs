@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace interview_programs_csharp.strings
+﻿namespace interview_programs_csharp.strings
 {
     internal class SubStringInStrings
     {
@@ -14,19 +8,20 @@ namespace interview_programs_csharp.strings
             string s2 = "";
             string s = str[0];
             string[] words = str[1].Split(',');
-            foreach(string word in words)
+            foreach (string word in words)
             {
                 int l = word.Length;
                 if (s.StartsWith(word) && s1.Length < l)
                 {
                     s1 = word;
-                }else if (s.EndsWith(word) && s2.Length < l)
+                }
+                else if (s.EndsWith(word) && s2.Length < l)
                 {
                     s2 = word;
                 }
             }
 
-            return s1+","+ s2;
+            return s1 + "," + s2;
         }
         public static void Main(String[] args)
         {
@@ -35,5 +30,5 @@ namespace interview_programs_csharp.strings
 
         }
     }
-   
+
 }
