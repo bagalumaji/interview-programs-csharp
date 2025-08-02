@@ -2,7 +2,7 @@
 {
     internal class SubStringInStrings
     {
-        public static String FindSbStringInString(String[] str)
+        public static string FindSbStringInString(String[] str)
         {
             string s1 = "";
             string s2 = "";
@@ -22,12 +22,6 @@
             }
 
             return s1 + "," + s2;
-        }
-        public static void Main(String[] args)
-        {
-            String[] str = { "baseball", "base,a,all,ball" };
-            Console.WriteLine(FindSbStringInString(str));
-
         }
     }
 

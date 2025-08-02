@@ -2,7 +2,7 @@
 {
     public class SortAndRemoveDuplicates
     {
-        static int[] SortArray(int[] arr)
+        public static int[] SortArray(int[] arr)
         {
            for(int i=0;i<arr.Length;i++)
             {
@@ -19,7 +19,7 @@
             return arr;
         }   
 
-        static int RemoveDuplicates(int[] arr)
+        public static int RemoveDuplicates(int[] arr)
         {
             int i = 0, j = 1;
             while (j<arr.Length)
@@ -33,16 +33,6 @@
             }
             return i + 1;
         }
-        public static void Main(string[] args)
-        {
-            int[] arr = {3,1,2,3,4,2,4,5};
-            arr = SortArray(arr);
-            int l=RemoveDuplicates(arr);
-
-            for (int i = 0; i < l; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
-        }
+       
     }
 }
