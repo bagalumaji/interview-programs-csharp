@@ -1,4 +1,5 @@
-﻿using interview_programs_csharp.arrays;
+﻿using interview_programs_csharp.comparer;
+using interview_programs_csharp.poco;
 
 namespace interview_programs_csharp
 {
@@ -6,21 +7,27 @@ namespace interview_programs_csharp
     {
         public static void Main(string[] args)
         {
-            int[] arr = { 3, 1, 2, 3, 4,6, 2, 4, 5 };
-            int[] result = SortAndRemoveDuplicates1.SortArrayAndRemoveDuplicates(arr);
+            List<Employee> employees = new List<Employee>();
 
-            foreach (var item in result)
+            employees.Add(new Employee("Sayaji", 60000));
+            employees.Add(new Employee("Ramesh", 50000));
+            employees.Add(new Employee("Raj", 60000));
+            employees.Add(new Employee("Sharu", 5000));
+
+            Console.WriteLine("Before sorting:");
+            foreach (var employee in employees)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(employee);
             }
 
-            //arr = SortAndRemoveDuplicates.SortArray(arr);
-            //int l = SortAndRemoveDuplicates.RemoveDuplicates(arr);
+            //employees.Sort(new SortEmployeeByName());
+            employees.Sort(new SortEmployeeBySalary());
 
-            //for (int i = 0; i < l; i++)
-            //{
-            //    Console.Write(arr[i] + " ");
-            //}
+            Console.WriteLine("After sorting by name:");
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
 
         }
     }
