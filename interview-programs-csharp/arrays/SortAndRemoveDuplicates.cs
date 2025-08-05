@@ -4,9 +4,9 @@
     {
         public static int[] SortArray(int[] arr)
         {
-           for(int i=0;i<arr.Length;i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                for (int j=0;j<arr.Length;j++)
+                for (int j = 0; j < arr.Length; j++)
                 {
                     if (arr[i] < arr[j])
                     {
@@ -17,12 +17,12 @@
                 }
             }
             return arr;
-        }   
+        }
 
         public static int RemoveDuplicates(int[] arr)
         {
             int i = 0, j = 1;
-            while (j<arr.Length)
+            while (j < arr.Length)
             {
                 if (arr[i] != arr[j])
                 {
@@ -33,6 +33,20 @@
             }
             return i + 1;
         }
-       
+
+        public static int[] RemoveDuplicatesWithSet(int[] arr)
+        {
+            HashSet<int> set = [.. arr];
+            int[] newArray = [.. set];
+            return newArray;
+        }
+        public static int[] RemoveDuplicatesWithLINQ(int[] arr)
+        {
+            return [.. arr.Distinct()];
+        }
+        public static void SortArrayWothSortMethod(int[] arr)
+        {
+            Array.Sort(arr);
+        }
     }
 }
